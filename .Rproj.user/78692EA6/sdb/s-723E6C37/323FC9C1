@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nmymyData <- c()\n\n# Define the UI\nui <- bootstrapPage(plotOutput('plot'))\n\nserver <- function(input, output) {\n  output$plot <- renderPlot({\n    plot(myData, type='l', col='red')\n  })\n}\n\nmyshinyplot <- function(x)\n{\n  myData <<- x\n  runApp(shinyApp(ui = ui, server = server ))\n}\n",
+    "created" : 1506745103752.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1927443984",
+    "id" : "323FC9C1",
+    "lastKnownWriteTime" : 1506745184,
+    "last_content_update" : 1506745184411,
+    "path" : "~/GitHub/shinyplot/R/hello.R",
+    "project_path" : "R/hello.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
